@@ -1,5 +1,5 @@
 import { Clipboard, showHUD } from "@raycast/api";
-import { validateOrgnr } from "./valider-organisasjonsnummer";
+import { validateOrgnr } from "./orgnr-validate";
 
 export default async function Command() {
   const orgnr = generateOrgnr();

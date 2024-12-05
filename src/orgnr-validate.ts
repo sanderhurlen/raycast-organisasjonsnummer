@@ -1,6 +1,6 @@
 import { showToast, Toast, LaunchProps } from "@raycast/api";
 
-export default async function Command(props: LaunchProps<{ arguments: Arguments.ValiderOrganisasjonsnummer }>) {
+export default async function Command(props: LaunchProps<{ arguments: Arguments.OrgnrValidate }>) {
   const control = validateOrgnr(props.arguments.orgnr);
   if (control === 10 || Number.isNaN(control)) {
     await showToast({

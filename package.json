@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "raycast-organisasjonsnummer",
-  "title": "Organisasjonsnummer",
-  "description": "Lager organisasjonsnumre til bruk som testdata. Numrene genereres tilfeldig, og følger reglene for oppbygging av organisasjonsnumre beskrevet hos Brønnøysundregistrene.",
+  "name": "raycast-norwegian-test-data",
+  "title": "Norske testdata",
+  "description": "Generer og validerer ulike Norske testdata.",
   "icon": "extension-icon.png",
   "author": "sander_hurlen",
   "categories": [
@@ -11,14 +11,14 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "generer-organisasjonsnummer",
+      "name": "orgnr-generate",
       "title": "Generer organisasjonsnummer",
       "subtitle": "Gyldig norsk organisasjonsnummer",
       "description": "Generer et gyldig norsk organisasjonsnummer som tilfredstiller kravene til Brønnøysundregisterene",
       "mode": "no-view"
     },
     {
-      "name": "valider-organisasjonsnummer",
+      "name": "orgnr-validate",
       "title": "Valider organisasjonsnummer",
       "subtitle": "Validerer at organisasjonsnummeret er gyldig",
       "description": "Validerer at organisasjonsnummeret er gyldig i henhold til Brønnøysundregisteret sine regler for organisasjonsnummer.",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "name": "orgnr-i-bruk",
+      "name": "orgnr-in-use",
       "title": "Orgnr. er opptatt?",
       "subtitle": "Sjekk om orgnr. er i bruk.",
       "description": "Sjekker om orgnr. er i bruk hos Brønnøysundregisteret.",
@@ -42,6 +42,28 @@
         {
           "name": "orgnr",
           "placeholder": "Organisasjonsnummer",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "fnr-generate",
+      "title": "Generer fødselsnummer",
+      "subtitle": "Gyldig norsk fødselsnummer",
+      "description": "Generer et gyldig norsk fødselsnummer som tilfredstiller kravene til Folkeregisteret",
+      "mode": "no-view"
+    },
+    {
+      "name": "fnr-validate",
+      "title": "Valider fødselsnummer",
+      "subtitle": "Valider norsk fødselsnummer",
+      "description": "Validerer at fødselsnummer er et gyldig norsk fødselsnummer som tilfredstiller kravene til Folkeregisteret",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "fnr",
+          "placeholder": "Fødselsnummer",
           "type": "text",
           "required": true
         }
